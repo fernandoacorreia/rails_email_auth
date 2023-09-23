@@ -1,24 +1,29 @@
-# README
+# Rails email authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Example of passwordless, email-based authentication with Ruby on Rails.
 
-Things you may want to cover:
+Based on [Building passwordless email auth in Rails](https://blog.testdouble.com/posts/2022-10-25-building-passwordless-email-auth-in-rails/).
 
-* Ruby version
+## Requirements
 
-* System dependencies
+Setup development environment: see [fernandoacorreia/macos-rails-setup](https://github.com/fernandoacorreia/macos-rails-setup)
 
-* Configuration
+This will set up PostgreSQL. Start it with:
 
-* Database creation
+```
+brew services start postgresql@16
+```
 
-* Database initialization
+## Development setup
 
-* How to run the test suite
+Create database:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bin/rails db:create
+```
 
-* Deployment instructions
+Start development server:
 
-* ...
+```
+bin/rails server
+```
