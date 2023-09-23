@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resource :login_email
+
+  resources :numbers
+
+  root "numbers#index"
 end
