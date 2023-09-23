@@ -28,4 +28,10 @@ class LoginEmailsController < ApplicationController
       redirect_to new_login_email_path(redirect_path: params[:redirect_path])
     end
   end
+
+  def destroy
+    reset_session
+    flash[:notice] = "Your account has been successfully logged out."
+    redirect_to new_login_email_path
+  end
 end
