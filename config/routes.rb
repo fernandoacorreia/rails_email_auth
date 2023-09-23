@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  match "login_emails/authenticate", to: "login_emails#authenticate", via: [:get, :post]
   resource :login_email
 
   resources :numbers

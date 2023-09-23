@@ -15,4 +15,9 @@ class LoginEmailsController < ApplicationController
     flash[:notice] = "E-mail sent to #{params[:email]}."
     redirect_to login_email_path
   end
+
+  def authenticate
+    flash[:error] = "We weren't able to log you in with that link. Try again?"
+    redirect_to new_login_email_path(redirect_path: params[:redirect_path])
+  end
 end
