@@ -33,6 +33,7 @@ bin/rails server
 ## Additional references
 
 - [The God Login](https://blog.codinghorror.com/the-god-login/)
+- [ryanb/letter_opener](https://github.com/ryanb/letter_opener)
 
 ## Extending
 
