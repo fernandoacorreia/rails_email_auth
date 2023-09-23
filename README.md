@@ -35,6 +35,12 @@ bin/rails server
 - [The God Login](https://blog.codinghorror.com/the-god-login/)
 - [ryanb/letter_opener](https://github.com/ryanb/letter_opener)
 
+## Alternatives
+
+- [Implementing Magic Links in Rails](https://www.magicalruby.com/implementing-magic-links-in-rails/)
+- [Implement Passwordless Authentication via Magic Link in Rails API](https://blog.kiprosh.com/implement-passwordless-authentication-via-magic-link-in-rails-api/)
+- [mikker/passwordless](https://github.com/mikker/passwordless)
+
 ## Extending
 
 - Validate email addresses. Sanitize them to prevent HTML/XSS attacks.
