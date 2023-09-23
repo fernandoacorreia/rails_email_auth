@@ -33,5 +33,8 @@ module RailsEmailAuth
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Prevents redirects to external domains
+    config.action_controller.raise_on_open_redirects
   end
 end

@@ -1,0 +1,6 @@
+<%= form_with url: login_email_path do |f| %>
+  <p>Enter your email address and press the button. We will send you an email message with a link that will let you securely sign in to the application.</p>
+  <%= f.hidden_field :redirect_path, value: @redirect_path %>
+  <%= f.email_field :email, placeholder: "human@example.com" %>
+  <%= f.submit "Send Login Link" %>
+<% end %>
