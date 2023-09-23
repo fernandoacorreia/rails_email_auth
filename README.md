@@ -4,6 +4,8 @@ Example of passwordless, email-based authentication with Ruby on Rails.
 
 Based on [Building passwordless email auth in Rails](https://blog.testdouble.com/posts/2022-10-25-building-passwordless-email-auth-in-rails/).
 
+See example app at [testdouble/magic_email_demo](https://github.com/testdouble/magic_email_demo).
+
 ## Requirements
 
 Setup development environment: see [fernandoacorreia/macos-rails-setup](https://github.com/fernandoacorreia/macos-rails-setup)
