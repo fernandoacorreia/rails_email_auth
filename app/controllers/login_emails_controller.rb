@@ -17,7 +17,15 @@ class LoginEmailsController < ApplicationController
   end
 
   def authenticate
-    flash[:error] = "We weren't able to log you in with that link. Try again?"
-    redirect_to new_login_email_path(redirect_path: params[:redirect_path])
+    result = EmailAuth::ValidatesLoginAttempt.new.validate(params[:token])
+    if result.success?
+      reset_session
+      session[:user_id] = result.user.id
+      flash[:notice] = "Welcome, #{result.user.email}!"
+      redirect_to params[:redirect_path]
+    else
+      flash[:error] = "We weren't able to log you in with that link. Try again?"
+      redirect_to new_login_email_path(redirect_path: params[:redirect_path])
+    end
   end
 end

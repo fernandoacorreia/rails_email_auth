@@ -41,3 +41,5 @@ bin/rails server
 - Store emails stripped or whitespace and converted to lower case since on most email services case is not significant.
 - Hold unknown email addresses in a separate magic links table and only register a new user when the user clicks on the link.
 - Better handling of failure to create new user record.
+- Change EmailAuth functions to static (class) methods.
+- For security reasons, make sure that tokens are unique (by storing them in a magic links table and not on the users table). This way there's no chance of 2 users having the same token, and a given token matching to the wrong user.
