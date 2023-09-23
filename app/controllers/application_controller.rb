@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def self.logged_out_users_welcome!
+  def self.allow_logged_out_users
     skip_before_action :require_login
   end
 end
