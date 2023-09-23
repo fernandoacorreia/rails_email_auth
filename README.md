@@ -29,3 +29,14 @@ Start development server:
 ```
 bin/rails server
 ```
+
+## Additional references
+
+- [The God Login](https://blog.codinghorror.com/the-god-login/)
+
+## Extending
+
+- Validate email addresses. Sanitize them to prevent HTML/XSS attacks.
+- Store emails stripped or whitespace and converted to lower case since on most email services case is not significant.
+- Hold unknown email addresses in a separate magic links table and only register a new user when the user clicks on the link.
+- Better handling of failure to create new user record.
